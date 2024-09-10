@@ -47,7 +47,7 @@ if (isset($_POST['siguiente'])) {
       <br>
       <div id="fechaHora"></div>
       <br><br>
-      <button class="btn_inicio">Procesar</button> <!--este button es el que va a llevar a la confirmacion de el reto y bandera osea si coinciden para revisar que se correcto de lo contrario mandara un mensaje de incorrecto el reto y la bandera no coinciden-->
+      <button type="submit" name="siguiente" class="btn_inicio">Procesar</button> <!--este button es el que va a llevar a la confirmacion de el reto y bandera osea si coinciden para revisar que se correcto de lo contrario mandara un mensaje de incorrecto el reto y la bandera no coinciden-->
     </form>
   </div>
   <br><br><br><br><br>
