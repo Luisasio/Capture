@@ -1,0 +1,173 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+  
+}
+.ancho{
+  width: 1200px;
+  margin: auto;
+}
+.titulo{
+  font-size: 35px;
+  padding: 50px;
+  text-align: center  ;
+}
+.cont_login{
+  width: 450px;
+  border: 2px rgba(255, 255, 255, 0.2) solid;
+  background: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);/*es para el sombreado*/
+  margin: auto;
+  padding: 30px 40px;
+  border-radius: 7px;
+  margin-top: 100px;
+}
+.elemento_inp{
+  padding: 10px;
+  width: 350px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 0;
+  border: 1px #ccc solid;
+}
+.btn_rojo{
+  width: 150px;
+  padding: 15px;
+  background-color: #800000;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+}
+.titulo2{
+  font-size: 50px;
+  text-align: center;
+  margin-top: 100px;
+}
+.texto1{
+  font-size: 30px;
+  text-align: center;
+}
+.cont_cabezera{
+  background-color: #cccc;
+  text-align: right;
+}
+.log_1{
+  width: 450px;
+  border-radius: 6px;
+  padding: 20px 40px;
+  border: 2px rgba(255, 255, 255, 0.2) solid;
+  background: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);/*es para el sombreado*/
+  margin: auto;
+  margin-top: 100px;
+  background-color: #f3f3f4;
+}
+.img_logo{
+  width: 250px;
+  margin-left: 560px;
+}
+.sub_1{
+  text-align: center;
+  padding: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.btn_loggin2{
+  width: 150px;
+  padding: 15px;
+  background-color: #800000;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+}
+.btn_loggin2:hover{
+  background-color: #5a0000;
+  transform: 0.3s;
+}
+.contenedor_registro label{
+  margin-right: 300px;
+}
+.cont_pantalla{
+  width: 700px;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+}
+.btn_inicio{
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #800000;
+  text-decoration: none;
+  color: white;
+  width: 100px;
+  text-align: center;
+  margin-right: 15px;
+}
+.btn_regresar_rojo{
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 0;
+  text-decoration: none;
+  color: #800000;
+  width: 150px;
+  text-align: center;
+  margin-right: 15px;
+  border: 1px #800000 solid;
+  margin: auto;
+  margin-left: 400px;
+}
+.btn_regresar_rojo:hover{
+  background-color: #5a0000;
+  color: white;
+  transition: 0.3s;
+}
+.btn_inicio:hover{
+  background-color: #5a0000;
+  transition: 0.3s;
+}
+.cont_registro_equipo{
+  width: 600px;
+  border-radius: 5px;
+  border: 1px #ccc solid;
+  padding: 20px 40px;
+  margin: auto;
+  background-color: #f3f3f4;
+  margin-top: 100px;
+}
+.cont_registro_equipo p{
+  display: inline-block;
+  margin-left: 10px;
+}
+.cont_registro_equipo input{
+  padding: 10px ;
+  width: 350px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 0;
+  border: 1px #ccc solid;
+}
+#numeroEquipo {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+#fechaHora {
+  font-size: 18px;
+  color: #333;
+}
+.datos_equipo{
+  padding: 10px;
+  width: 1350px;
+  margin: auto;
+  line-height: 45px;
+  color: #800000;
+}
