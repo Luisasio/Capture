@@ -15,17 +15,23 @@ if (mysqli_num_rows($resultado) > 0) {
   // Incrementa el índice del reto cuando la respuesta es correcta
   $_SESSION['reto_index'] += 1;
 
+  // Calcula la pantalla de reto siguiente
+  $nueva_pantalla = "pantalla_reto" . ($_SESSION['reto_index'] + 1) . ".php";
+  
   echo '
   <script>
     alert("Respuesta correcta");
-    location.href = "pantalla_reto2.php";
+    location.href = "' . $nueva_pantalla . '";
   </script>
   ';
 } else {
+  // Calcula la pantalla de reto actual
+  $pantalla_actual = "pantalla_reto" . ($_SESSION['reto_index'] + 1) . ".php";
+
   echo '
   <script>
     alert("Respuestas incorrectas");
-    location.href = "pantalla_reto1.php";
+    location.href = "' . $pantalla_actual . '";
   </script>
   ';
 }
