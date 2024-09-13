@@ -171,3 +171,11 @@ body{
   line-height: 45px;
   color: #800000;
 }
+.aviso_error{
+  color: red;
+  background-color: #f39f9f;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 5px;
+}

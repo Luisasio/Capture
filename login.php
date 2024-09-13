@@ -8,6 +8,12 @@
 </head>
 <body>
 <div class="log_1">
+          <?php 
+          $errorusuario = isset($_GET["errorusuario"]);
+          if($errorusuario == "SI"){
+              echo '<h3 class="aviso_error"> Datos incorrectos  </h3> <br><br>';
+          }
+          ?>
         <form action="autentificar.php" method="post">
             <label for="">Ingrese el numero del equipo Max. 3 digitos&#40Solo valores enteros&#41</label>
             <br>

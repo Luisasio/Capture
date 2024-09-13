@@ -38,7 +38,7 @@ if (mysqli_num_rows($resultado) > 0) {
   echo '
   <script>
     alert("NO ESTÁS REGISTRADO");
-    location.href = "login.php";
+    location.href = "login.php?errorusuario=SI";
   </script>
   ';
 }
