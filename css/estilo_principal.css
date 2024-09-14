@@ -179,3 +179,15 @@ body{
   font-size: 15px;
   border-radius: 5px;
 }
+.cont_reto_actual{
+  width: 950px;
+  margin: auto;
+  text-align: center;
+  font-size: 32px;
+}
+.cont_reto_siguiente{
+  width: 950px;
+  margin: auto;
+  text-align: center;
+  font-size: 32px;
+}

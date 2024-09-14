@@ -29,8 +29,9 @@ if (isset($_POST['siguiente'])) {
   <div>
     <h2>El numero de equipo es: <?php echo $numero_equipo?></h2>
     <h2>El nombre del equipo es: <?php echo htmlspecialchars($nombre_equipo);?></h2>
+  </div>
+  <div class="cont_reto_actual">
     <h2>Reto Actual: <?php echo htmlspecialchars($reto_actual); ?></h2>
-    <h2>Reto Siguiente: <?php echo htmlspecialchars($reto_siguiente); ?></h2>
   </div>
   <div class="cont_registro_equipo">
    
@@ -50,8 +51,11 @@ if (isset($_POST['siguiente'])) {
       <button type="submit" name="siguiente" class="btn_inicio">Procesar</button> <!--este button es el que va a llevar a la confirmacion de el reto y bandera osea si coinciden para revisar que se correcto de lo contrario mandara un mensaje de incorrecto el reto y la bandera no coinciden-->
     </form>
   </div>
-  <br><br><br><br><br>
-  <div> <h2>El reto siguiente es: </h2> </div>
+  <br><br><br><br>
+  <div class="cont_reto_siguiente">
+    <h2>Reto Siguiente: <?php echo htmlspecialchars($reto_siguiente); ?></h2>
+  </div>
+  <br><br>
   <script>
         function mostrarFechaHora() {
             // Obtener la fecha y hora actuales
