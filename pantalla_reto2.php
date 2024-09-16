@@ -8,7 +8,11 @@ $reto_index = $_SESSION['reto_index']; // Obtiene el índice actual del reto
 // Determina el reto actual y el siguiente
 $reto_actual = $retos[$reto_index]; // Reto actual
 $reto_siguiente = isset($retos[$reto_index + 1]) ? $retos[$reto_index + 1] : "No hay más retos"; // Reto siguiente, si existe
-
+// Verifica si hay un mensaje de error en la sesión
+if (isset($_SESSION['error'])) {
+  $mensaje_error = $_SESSION['error'];
+  unset($_SESSION['error']); // Elimina el mensaje de error después de mostrarlo
+}
 // Aumenta el índice para el siguiente reto cuando se cargue la siguiente pantalla
 if (isset($_POST['siguiente'])) {
   $_SESSION['reto_index'] = $reto_index + 1;
@@ -34,7 +38,12 @@ if (isset($_POST['siguiente'])) {
     <h2>Reto Actual: <?php echo htmlspecialchars($reto_actual); ?></h2>
   </div>
   <div class="cont_registro_equipo">
-   
+    <!-- Mostrar mensaje de error si existe -->
+    <?php if (isset($mensaje_error)): ?>
+    <div class="mensaje_error">
+      <p><?php echo htmlspecialchars($mensaje_error); ?></p>
+    </div>
+    <?php endif; ?>
     <form action="verificar_reto.php" method="post">
       <label for="">Reto:</label>
       <br>

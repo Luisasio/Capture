@@ -18,22 +18,18 @@ if (mysqli_num_rows($resultado) > 0) {
   // Calcula la pantalla de reto siguiente
   $nueva_pantalla = "pantalla_reto" . ($_SESSION['reto_index'] + 1) . ".php";
   
-  echo '
-  <script>
-    alert("Respuesta correcta");
-    location.href = "' . $nueva_pantalla . '";
-  </script>
-  ';
+  // Redirigir a la siguiente pantalla
+  $reto_siguiente = "pantalla_reto" . ($_SESSION['reto_index'] + 1) . ".php";
+  header("Location: $reto_siguiente");
+  exit(); // Termina la ejecución del script
 } else {
-  // Calcula la pantalla de reto actual
-  $pantalla_actual = "pantalla_reto" . ($_SESSION['reto_index'] + 1) . ".php";
-
-  echo '
-  <script>
-    alert("Respuestas incorrectas");
-    location.href = "' . $pantalla_actual . '";
-  </script>
-  ';
+  // Si la respuesta es incorrecta, crea una variable de error
+  $_SESSION['error'] = "Respuesta incorrecta. Inténtalo de nuevo.";
+  
+  // Redirige a la misma pantalla de reto actual
+  $reto_actual = "pantalla_reto" . ($_SESSION['reto_index'] + 1) . ".php";
+  header("Location: $reto_actual");
+  exit(); // Termina la ejecución del script
 }
 ?>
 

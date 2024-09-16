@@ -191,3 +191,11 @@ body{
   text-align: center;
   font-size: 32px;
 }
+.mensaje_error{
+  background-color: #f39f9f;
+  border-radius:  6px;
+  padding: 10px;
+  text-align: center;
+  color: #f72f2f;
+  font-weight: bold;
+}
