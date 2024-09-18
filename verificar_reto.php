@@ -2,36 +2,25 @@
 require "conexion.php";
 session_start();
 
+$reto_index = $_SESSION['reto_index'];
+$retos = $_SESSION['retos'];
+$reto_actual = $retos[$reto_index]; // Obtiene el reto actual
+
 $reto = $_POST['reto'];
 $bandera = $_POST['bandera'];
 
-//echo $reto . "<br>";
-//echo $bandera . "<br>";
-
-$comparar_campos = "SELECT * FROM retos WHERE reto = '$reto' AND bandera = '$bandera'";
+// Consulta solo para validar el reto actual
+$comparar_campos = "SELECT * FROM retos WHERE reto = '$reto' AND bandera = '$bandera' AND reto = '$reto_actual'";
 $resultado = mysqli_query($conectar, $comparar_campos);
 
 if (mysqli_num_rows($resultado) > 0) {
-  // Incrementa el índice del reto cuando la respuesta es correcta
   $_SESSION['reto_index'] += 1;
-
-  // Calcula la pantalla de reto siguiente
-  $nueva_pantalla = "pantalla_reto" . ($_SESSION['reto_index'] + 1) . ".php";
-  
-  // Redirigir a la siguiente pantalla
-  $reto_siguiente = "pantalla_reto" . ($_SESSION['reto_index'] + 1) . ".php";
-  header("Location: $reto_siguiente");
-  exit(); // Termina la ejecución del script
+  /*$_SESSION['mensaje'] = "Respuesta correcta"; // Almacena el mensaje*/
+  header("Location: pantalla_reto" . ($_SESSION['reto_index'] + 1) . ".php");
+  exit();
 } else {
-  // Si la respuesta es incorrecta, crea una variable de error
-  $_SESSION['error'] = "Respuesta incorrecta. Inténtalo de nuevo.";
-  
-  // Redirige a la misma pantalla de reto actual
-  $reto_actual = "pantalla_reto" . ($_SESSION['reto_index'] + 1) . ".php";
-  header("Location: $reto_actual");
-  exit(); // Termina la ejecución del script
+  $_SESSION['mensaje'] = "Respuestas incorrectas"; // Almacena el mensaje
+  header("Location: pantalla_reto" . ($_SESSION['reto_index'] + 1) . ".php");
+  exit();
 }
 ?>
-
-
-
