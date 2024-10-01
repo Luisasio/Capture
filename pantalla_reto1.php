@@ -47,12 +47,40 @@ unset($_SESSION['mensaje']); // Limpia el mensaje después de mostrarlo
       <br>
       <input type="text" name="bandera">
       <br>
+      <!-- campo en hidden que es en donde se va a enviar el tiempo -->
+      <input type="hidden" name="tiempo_envio" id="tiempo_envio">
       <label for="">Fecha:</label>
       <br>
       <div id="fechaHora"></div>
       <br><br>
-      <button type="submit" name="siguiente" class="btn_inicio">Procesar</button> <!--este button es el que va a llevar a la confirmacion de el reto y bandera osea si coinciden para revisar que se correcto de lo contrario mandara un mensaje de incorrecto el reto y la bandera no coinciden-->
+      <button type="submit" name="siguiente" class="btn_inicio" onclick="capturarTiempo()">Procesar</button> <!--este button es el que va a llevar a la confirmacion de el reto y bandera osea si coinciden para revisar que se correcto de lo contrario mandara un mensaje de incorrecto el reto y la bandera no coinciden-->
     </form>
+    <script>
+   function capturarTiempo() {
+    // Captura el tiempo en la zona horaria del Centro de México
+    const ahora = new Date();
+    
+    // Formatear la fecha y hora en la zona horaria de México (Centro)
+    const opciones = { 
+        timeZone: 'America/Mexico_City', 
+        year: 'numeric', 
+        month: '2-digit', 
+        day: '2-digit', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit',
+        hour12: false
+    };
+    
+    const formatoFecha = new Intl.DateTimeFormat('es-MX', opciones).formatToParts(ahora);
+
+    // Crear una fecha con las partes formateadas
+    const fechaISO = `${formatoFecha[4].value}-${formatoFecha[2].value}-${formatoFecha[0].value}T${formatoFecha[6].value}:${formatoFecha[8].value}:${formatoFecha[10].value}`;
+
+    // Asignar el tiempo capturado en el campo hidden
+    document.getElementById('tiempo_envio').value = fechaISO;
+}
+    </script>
   </div>
   <br><br><br><br>
   <div class="cont_reto_siguiente">
