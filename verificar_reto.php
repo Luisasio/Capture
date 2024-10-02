@@ -16,17 +16,29 @@ $comparar_campos = "SELECT * FROM retos WHERE reto = '$reto' AND bandera = '$ban
 $resultado = mysqli_query($conectar, $comparar_campos);
 
 if (mysqli_num_rows($resultado) > 0) {
-  $insertar_tiempo = "INSERT INTO tiempo (tiempo_fin,numero_equipo, reto) VALUES (?,?,?)";
+    // Inserta el tiempo en la tabla de tiempos
+    $insertar_tiempo = "INSERT INTO tiempo (tiempo_fin, numero_equipo, reto) VALUES (?, ?, ?)";
     $stmt = $conectar->prepare($insertar_tiempo);
-    $stmt->bind_param("sss",$tiempo_envio, $numero_equipo, $reto_actual);
+    $stmt->bind_param("sss", $tiempo_envio, $numero_equipo, $reto_actual);
     $stmt->execute();
-  //funciones de la redireccion
-  $_SESSION['reto_index'] += 1;
-  header("Location: pantalla_reto" . ($_SESSION['reto_index'] + 1) . ".php");
-  exit();
+
+    // Incrementa el índice del reto solo si hay más retos
+    $_SESSION['reto_index'] += 1;
+
+    // Verifica si el equipo ha completado todos los retos
+    if ($_SESSION['reto_index'] >= count($retos)) {
+        // Si ha completado el último reto, redirige a la página de resultados
+        header("Location: pantalla_resultados.php");
+        exit();
+    } else {
+        // Si no ha completado todos los retos, redirige a la siguiente pantalla de reto
+        header("Location: pantalla_reto" . ($_SESSION['reto_index'] + 1) . ".php");
+        exit();
+    }
 } else {
-  $_SESSION['mensaje'] = "Respuestas incorrectas"; // Almacena el mensaje
-  header("Location: pantalla_reto" . ($_SESSION['reto_index'] + 1) . ".php");
-  exit();
+    // Si la respuesta es incorrecta, vuelve a la misma pantalla con un mensaje
+    $_SESSION['mensaje'] = "Respuestas incorrectas"; // Almacena el mensaje
+    header("Location: pantalla_reto" . ($_SESSION['reto_index'] + 1) . ".php");
+    exit();
 }
 ?>

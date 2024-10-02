@@ -1,0 +1,340 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family:system-ui;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+  background-color: #e1e1e1;
+}
+.ancho{
+  width: 1300px;
+  margin: auto;
+}
+.contenedor_cabecera{
+  padding: 15px;
+  background-color: #0e7cb2;
+  text-align: center;
+}
+.img-panel{
+  width: 120px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 30px;
+}
+.contenedor_menu_bar{
+  border-radius: 13px;
+  width: 250px;
+  height: 500px;
+  display: inline-block;
+  background-color: #0e7cb2;
+  vertical-align: top;
+
+}
+.conenedor_admin{
+  width: 950px;
+  display: inline-block;
+  border-radius: 13px;
+  margin-left: 20px;
+  border: 1px #ccc solid;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+.fondo_adm{
+  width: 800px;
+  border-radius: 9px;
+}
+.contenedor_cuerpo{
+  padding: 15px;
+}
+.logo_menu{
+  width: 200px;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+.btn_menu_bar{
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+  width: 250px;
+  color: white;
+  font-family: system-ui;
+  padding-left: 30px;
+  transition: 0.6s;
+}
+.btn_menu_bar:hover{
+  background-color: #0d567a;
+  color: white;
+  transform: scale(0.9);
+}
+.tamaño{
+  width: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.btn_menu{
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+  font-family: system-ui;
+  font-size: 19px;
+  margin-left: 20px;
+  background-color: #FFD147;
+  width: 190px;
+  border-radius: 6px;
+}
+.btn_menu:hover{
+  box-shadow: 0 0 5px #FFD147, 0 0 25px #FFD147, 0 0 50px #FFD147, 0 0 100px #FFD147, 0 0 200px #FFD147;
+}
+.contenedor_cursos{
+  width: 950px;
+  display: inline-block;
+  border-radius: 13px;
+  margin-left: 20px;
+  border: 1px #ccc solid;
+  padding: 20px;
+  background-color: #fff;
+}
+.elemento_inp2{
+  padding: 10px;
+  width: 500px;
+  border: 0;
+  border: 1px #ccc solid;
+  border-radius: 7px;
+}
+.areatext{
+  padding: 10px;
+  width: 500px;
+  border: 0;
+  border: 1px #ccc solid;
+  border-radius: 7px;
+  height: 190px;
+  resize: none;
+}
+.radio{
+  margin-left: 20px;
+}
+.btn_guardar_curso{
+  display: inline-block;
+  width: 150px;
+  background-color: #0e7cb2;
+  border-radius: 7px;
+  border: 0;
+  padding: 10px;
+  transition: 0.3s;
+  color: #fff;
+}
+.btn_guardar_curso:hover{
+  background-color: #0c6896;
+}
+.return{
+  width: 100px;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+.cont_login{
+  width: 500px;
+  border: 2px rgba(255, 255, 255, 0.2) solid;
+  background: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  padding: 30px 40px;
+  border-radius: 7px;
+  margin-top: 150px;
+}
+.cont_login p{
+  font-size: 23px;
+  font-weight: bold;
+  text-align: center;
+  
+}
+.login_inp{
+  width: 390px;
+  padding: 9px;
+  margin-bottom: 15px;
+  border: 0;
+  background-color: #fff;
+  border: 1px #ccc solid;
+  border-radius: 6px;
+}
+.btn_login{
+  width: 390px;
+  padding: 10px;
+  color :white;
+  background-color: #0e7cb2;
+  border-radius: 6px;
+  border: 0;
+  transition: 0.5s;
+}
+.btn_login:hover{
+  background-color: #0b4e72;
+}
+.cont_admins{
+  width: 850px;
+  margin: auto;
+  border-radius: 6px;
+  border: 2px #ccc solid;
+  padding: 10px;
+}
+.form_nuevoadm{
+  text-align: center;
+  padding: 20px;
+}
+.nuevo_adminInp{
+  width: 700px;
+  padding: 10px;
+  border: 0;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border:1px #ccc solid;
+}
+.btn_admin{
+  width: 390px;
+  padding: 10px;
+  color :white;
+  background-color: #0e7cb2;
+  border-radius: 6px;
+  border: 0;
+  transition: 0.5s;
+}
+.btn_admin:hover{
+  background-color: #0b4e72;
+}
+.img-regresar{
+  width: 100px;
+  
+}
+.usuario_menu{
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+.tamaño_usuario{
+  width: 35px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.cont_admins td{
+  padding: 9px;
+  border-radius: 6px;
+  background-color: #e2e2e2;
+}
+.cont_admins th{
+  padding: 9px;
+  border-radius: 6px;
+  background-color: #67a4c2;
+}
+.cont_admins table{
+  border-radius: 9px;
+  border: 1px #ccc solid;
+  margin: auto;
+  width: 780px;
+}
+.eliminar_adm{
+  width: 35px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.eliminar_txt{
+  color: #ff5555;
+  font-weight: bold;
+}
+.cont_admins a{
+  text-decoration: none;
+}
+.btn_agregar_admin{
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  background-color: #0e7cb2;
+  color: #fff;
+  border-radius: 9px;
+  transition: 0.6s;
+}
+.btn_agregar_admin:hover{
+  background-color: #0b5f9b;
+}
+.contenedor_tabla_cursos table{
+  border-radius: 9px;
+  border: 1px #ccc solid;
+  margin: auto;
+  width: 900px;
+}
+.contenedor_tabla_cursos th{
+  padding: 9px;
+  border-radius: 6px;
+  background-color: #67a4c2;
+}
+.contenedor_tabla_cursos td{
+  padding: 9px;
+  border-radius: 6px;
+  background-color: #e2e2e2;
+}
+.contenedor_tabla_cursos img{
+  width: 50px;
+}
+.contenedor_tabla_cursos a{
+  text-decoration: none;
+}
+.contenedor_inscripciones{
+  border-radius: 9px;
+  width: 900px;
+  margin: auto;
+}
+.ver_factura{
+  padding: 10px;
+  background-color: #fff;
+  border: 1px #e4e4e4 solid;
+  display: inline-block;
+  border-radius: 6px;
+  color: #333;
+  transition: 0.5s;
+}
+.ver_factura:hover{
+  background-color: #dfdfdf;
+}
+.icono_pdf{
+  width: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.contenedor_inscripciones a{
+  text-decoration: none;
+}
+.contenedor_cursos2{
+  width: 980px;
+  display: inline-block;
+  border-radius: 13px;
+  margin-left: 20px;
+  border: 1px #ccc solid;
+  padding: 20px;
+  background-color: #fff;
+}
+.regresar_btn{
+  background-color: #0e7cb2;
+  padding: 10px 20px;
+  padding-bottom: 12px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 9px;
+  transition: 0.5s;
+
+}
+.regresar_btn:hover{
+  background-color: #085a86;
+}
+.tamaño_regresar_img{
+  width: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -20px;
+}
+
